@@ -6,6 +6,7 @@ yarn.lock
 .DS_Store
 .AppleDouble
 _asserts/dist/
+wpk_config
 npm-debug.log
 *.txt
 tmp.*
