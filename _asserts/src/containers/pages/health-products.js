@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { grabHealth } from '../../actions';
 import { renderCards } from '../../helpers/render-cards';
+import Spinner from '../../components/spinner';
 
 class HealthProductsCompo extends Component {
     constructor(props) {
@@ -14,6 +15,11 @@ class HealthProductsCompo extends Component {
     }
 
     render () {
+        if(!this.props.health || this.props.health.length === 0) {
+            return (
+                <Spinner />
+            )
+        }
         return (
             <div className="row mx-3">
                 {this.props.health.map(renderCards)}

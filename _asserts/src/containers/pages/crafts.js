@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { grabCrafts } from '../../actions';
 import { renderCards } from '../../helpers/render-cards';
+import Spinner from '../../components/spinner';
 
 class CraftsCompo extends Component {
     constructor(props) {
@@ -14,6 +15,11 @@ class CraftsCompo extends Component {
     }
 
     render () {
+        if(!this.props.crafts || this.props.crafts.length === 0) {
+            return (
+                <Spinner />
+            )
+        }
         return (
             <div className="row mx-3">
                 {this.props.crafts.map(renderCards)}

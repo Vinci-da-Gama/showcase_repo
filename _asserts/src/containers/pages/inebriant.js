@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { grabInebriants } from '../../actions';
 import { renderCards } from '../../helpers/render-cards';
+import Spinner from '../../components/spinner';
 
 class InebriantCompo extends Component {
     constructor(props) {
@@ -17,6 +18,11 @@ class InebriantCompo extends Component {
     }
 
     render () {
+        if(!this.props.inebriants || this.props.inebriants.length === 0) {
+            return (
+                <Spinner />
+            )
+        }
         return (
             <div className="row mx-3">
                 {this.props.inebriants.map(renderCards)}
