@@ -17,7 +17,6 @@ export const grabInebriants = () => {
 		return axios.get('https://api.myjson.com/bins/svo9k')
 			.then((resp) => {
 				if (resp) {
-					console.log('20 -- resp: ', resp);
 					dispatch(loadInebriants(resp.data.inebriants));
 				} else {
 					dispatch(handleNoData(dispatch, catchError));

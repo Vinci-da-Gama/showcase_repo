@@ -29,7 +29,6 @@ class FreshCompo extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log('26 -- state.fresh: ', state.fresh);
     return {
         fresh: state.fresh.fresh
     }
