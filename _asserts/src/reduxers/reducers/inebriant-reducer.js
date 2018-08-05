@@ -1,4 +1,4 @@
-import { FETCH_INEBRIANT } from '../types';
+import { FETCH_INEBRIANT } from '../../types';
 
 const INIT_INEBRIANTS = {
 	inebriants: []
