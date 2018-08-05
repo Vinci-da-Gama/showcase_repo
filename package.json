@@ -9,7 +9,7 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack -p --mode=production",
     "jssv": "json-server --watch sample-data.json --port 3004",
-    "heroku-postbuild": "yarn run build:prod",
+    "heroku-postbuild": "npm run build:prod",
     "test": "jest --config=jest.config.json"
   },
   "keywords": [],
