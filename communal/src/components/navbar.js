@@ -22,7 +22,7 @@ class AppNavBarCompo extends Component {
         return (
             <Navbar color="light" light expand="md">
                 <NavbarBrand to="/" activeClassName="active" tag={RRNavLink} exact>
-                    <img src="../../img/brand.png" className="brand-navbar" alt="brand..." />
+                    <img src="./img/brand.png" className="brand-navbar" alt="brand..." />
                     Show_Case
                 </NavbarBrand>
                 <NavbarToggler onClick={() => this.toggle()} />

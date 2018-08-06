@@ -6,10 +6,12 @@ import ExtractTextPlugin  from 'extract-text-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import wpkMerge           from 'webpack-merge';
 
-const ast = './_asserts', distDir = `${ast}/dist`, devSrc = `${ast}/src/`, sassLane = `${ast}/style`;
+const ast = './_asserts', distDir = `${ast}/dist`, 
+    communal = './communal', devSrc = `${communal}/src/`, 
+    sassLane = `${communal}/style`;
 const entryIdx = `${devSrc}index.js`;
 const npmLifecycle = process.env.npm_lifecycle_event;
-console.log('12 -- npmLifecycle: ', npmLifecycle);
+console.log('14 -- npmLifecycle: ', npmLifecycle);
 
 const pathsToClean = [
     `${distDir}/js/`,
@@ -25,7 +27,7 @@ const isProduction = npmLifecycle === 'build:prod';
 
 const commonConfig = {
     // for development.
-    devtool: isProduction ? 'source-map' : 'inline-source-map',
+    devtool: isProduction ? '' : 'inline-source-map',
     entry: {
         testApp: [
             'babel-polyfill',
