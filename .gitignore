@@ -10,3 +10,6 @@ wpk_config
 npm-debug.log
 *.txt
 tmp.*
+.babelrc
+postcss.config.js
+webpack.config.babel.js
